@@ -692,6 +692,7 @@
     font-size: 15px;
   }
   .library-icon {
+    font-size: 12px;
     margin: 30px 10px;
     gap: 0;
     justify-content: space-between;
@@ -723,6 +724,9 @@
     margin-left: 0;
     position: relative;
     left: 50px;
+  }
+  .stream-icons {
+    font-size: 12px;
   }
 }
 @media (max-width: 435px) {
