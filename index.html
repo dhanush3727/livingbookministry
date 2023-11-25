@@ -6,57 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Living Book Ministry</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="image/logo.png">
   </head>
   <body>
-    <!-- Header Navbar-->
     <header>
+      <!-- Header Title -->
+      <div class="header">
+        <img src="image/logo.png" alt="Living Book Ministry" class="logo-img" width="100px" height="100px">
+        <h1 class="logo-title">LIVING BOOK MINISTRY</h1>
+      </div>
       <nav>
-        <!-- Logo Image and Title -->
-        <div class="header">
-          <div class="header-img">
-            <img
-              src="image/logo.png"
-              alt=""
-              class="logo-img"
-              width="100px"
-              height="100px"
-            />
-            <h1 class="header-title">
-              LIVING BOOK <br />
-              MINISTRY
-            </h1>
-            <!---Search Items-->
-          <div class="search-item">
-            <ul class="nav-list" id="nav-list">
-              <li class="list-item" id="list-item-one">
-                <a href="#">City of Carmel</a>
-              </li>
-              <li class="list-item" id="list-item-two">
-                <a href="#">My Account</a>
-              </li>
-            </ul>
-            <form action="" class="search">
-              <input
-                type="text"
-                placeholder="Search"
-                id="search-box"
-                class="search-box"
-              />
+        <!-- Hamburger NavBar -->
+        <div class="mobile-nav-bar">
+          <div class="menu-item">
+            <img src="image/hamburger menu.png" alt="" class="menu" width="25px" height="25px">
+            <img src="image/close.png" alt="" class="closeMenu" width="20px" height="20px">
+          </div>
+            <input type="search" placeholder="Search" class="mobile-search-bar">
+            <div class="search-icon">
+              <img src="image/search.png" class="mobile-search" alt="" width="25px" height="25px">
+              <img src="image/close.png" alt="" class="mobile-close" width="25px" height="25px"></div>
+        </div>
+        <ul class="mobile-menu">
+          <li><a href="#">Library News</a></li>
+          <li class="list">
+            <a href="#"
+              >Library Services
               <img
-                src="image/search-outline.svg"
+                src="image/drop down.png"
                 alt=""
-                width="20px"
-                height="20px"
-                class="search-icon"
-                id="search-icon"
-              />
-            </form>
-          </div>
-          </div>
-          <!-- List-items -->
+                width="10px"
+                height="10px"
+            /></a>
+            <ul class="nestedList">
+              <li><a href="#">Borrowing</a></li>
+              <li><a href="#">Book Clubs</a></li>
+              <li><a href="#">Get a Library Card</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Event Calender</a></li>
+          <li class="list">
+            <a href="#"
+              >Local History
+              <img
+                src="image/drop down.png"
+                alt=""
+                width="10px"
+                height="10px"
+            /></a>
+            <ul class="nestedList">
+              <li><a href="#">Collections</a></li>
+              <li><a href="#">Maps & Buildings</a></li>
+              <li><a href="#"> Oral History</a></li>
+            </ul>
+          </li>
+          <li class="list">
+            <a href="#"
+              >Stream & Download
+              <img
+                src="image/drop down.png"
+                alt=""
+                width="10px"
+                height="10px"
+            /></a>
+            <ul class="nestedList">
+              <li><a href="#">Audio-Books</a></li>
+              <li><a href="#">E-Books</a></li>
+              <li><a href="#">Magazines & News</a></li>
+              <li><a href="#">Music</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Support the Library</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <!-- Large Screen NavBar -->
+        <div class="nav-bar">
           <ul class="list-items">
             <li><a href="#">Library News</a></li>
-            <li>
+            <li class="list">
               <a href="#"
                 >Library Services
                 <img
@@ -72,7 +99,7 @@
               </ul>
             </li>
             <li><a href="#">Event Calender</a></li>
-            <li>
+            <li class="list">
               <a href="#"
                 >Local History
                 <img
@@ -87,7 +114,7 @@
                 <li><a href="#"> Oral History</a></li>
               </ul>
             </li>
-            <li>
+            <li class="list">
               <a href="#"
                 >Stream & Download
                 <img
@@ -106,12 +133,9 @@
             <li><a href="#">Support the Library</a></li>
             <li><a href="#">Contact Us</a></li>
           </ul>
-          <!-- Hamburger Line -->
-          <div class="menu">
-            <div class="menu-line"></div>
-            <div class="menu-line"></div>
-            <div class="menu-line"></div>
-          </div>
+          <input type="search" placeholder="Search" class="search-bar">
+          <img src="image/search.png" class="search" alt="" width="25px" height="25px">
+          <img src="image/close.png" alt="" class="close" width="25px" height="25px">
         </div>
       </nav>
     </header>
@@ -181,6 +205,7 @@
           <p class="stream-para">Browse through our library if streaming content
           <img src="image/arrow-forward-outline.svg" alt="" width="10px" height="10px"></p>
         </div>
+        <img class="left-arr" src="image/left.png" alt="" width="30px" height="30px">
         <div class="stream-icons">
           <div class="stream-icon"><a href="#"><img src="image/audio-book-png.png" alt="" width="25px" height="35px"><p>Audiobooks</p></a></div>
           <div class="stream-icon"><a href="#"><img src="image/news.png" alt="" width="125px" height="140px"><p>Magazines/News</p></a></div>
@@ -188,45 +213,47 @@
           <div class="stream-icon"><a href="#"><img src="image/music.png" alt="" width="100px" height="110px"><p>Music</p></a></div>
           <div class="stream-icon"><a href="#"><img src="image/video.png" alt="" width="38px" height="43px"><p>Movies & TV</p></a></div>
         </div>
+        <img class="right-arr" src="image/right.png" alt="" width="30px" height="30px">
       </div>
       <!-- Book Collection -->
       <div class="book-collection">
         <div class="collection-txt">
           <p class="txt-title">FEATURED BOOKS</p>
           <p class="txt-para">More Great Reads 
-              <img src="image/arrow-forward-outline.svg" alt="" width="15px" height="15px">
               <img class="arrow-img" src="image/left.png" alt="" width="20px" height="20px">
               <img class="arrow-img" src="image/right.png" alt="" width="20px" height="20px">
           </p>
         </div>
-        <div class="book-card">
-          <div class="cardOne">
-            <img src="image/The Missing Hours.png" alt="">
-            <h4>The Missing Hours</h4>
-            <p><b>Julia Dahi</b><br>
-              Adult | Mystery Fiction
-            </p>
-          </div>
-          <div class="cardTwo">
-            <img src="image/The light of luna park.png" alt="">
-            <h4>The Light of Luna Park</h4>
-            <p><b>Addison Armstrong</b><br>
-              Adult | Historical Fiction
-            </p>
-          </div>
-          <div class="cardThree">
-            <img src="image/The Manningtree Witches.png" alt="">
-            <h4>The Manningtree Witches</h4>
-            <p><b>A.K. Blakemore</b><br>
-              Adult | Fiction
-            </p>
-          </div>
-          <div class="cardFour">
-            <img src="image/black girl.png" alt="">
-            <h4>Black Girls Must Die Exhausted</h4>
-            <p><b>Jayne Allen</b><br>
-              Adult | Fiction
-            </p>
+        <div class="book">
+          <div class="book-card">
+            <div class="cardOne">
+              <img src="image/The Missing Hours.png" alt="">
+              <h4>The Missing Hours</h4>
+              <p><b>Julia Dahi</b><br>
+                Adult | Mystery Fiction
+              </p>
+            </div>
+            <div class="cardTwo">
+              <img src="image/The light of luna park.png" alt="">
+              <h4>The Light of Luna Park</h4>
+              <p><b>Addison Armstrong</b><br>
+                Adult | Historical Fiction
+              </p>
+            </div>
+            <div class="cardThree">
+              <img src="image/The Manningtree Witches.png" alt="">
+              <h4>The Manningtree Witches</h4>
+              <p><b>A.K. Blakemore</b><br>
+                Adult | Fiction
+              </p>
+            </div>
+            <div class="cardFour">
+              <img src="image/black girl.png" alt="">
+              <h4>Black Girls Must Die Exhausted</h4>
+              <p><b>Jayne Allen</b><br>
+                Adult | Fiction
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -240,12 +267,12 @@
             <h1 class="footer-txt">LIVING BOOK MINISTRY</h1>
           </div>
           <p class="contact-details">
-            Contact Us :- <br>
+            Contact Us :<br>
             15, Bryant Nagar, <br>3 <sup>rd</sup> Street(west), <br>
             Thoothukudi - 628008. <br>Tamil Nadu, South India
           </p>
           <div class="links">
-            <p class="follow">Follow Us :-</p>
+            <p class="follow">Follow Us :</p>
             <a href="#"
                   ><img
                     src="image/instagram.png"

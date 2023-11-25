@@ -3,100 +3,93 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* Navbar style */
+
+/* Header Title Style */
 .header {
   background-color: rgb(18, 18, 170);
-  width: 100%;
-}
-/* Header Logo and Title style */
-.header-img {
+  color: white;
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .logo-img {
-  margin-top: 30px;
-  margin-left: 30px;
+  margin-top: 10px;
 }
-.header-title {
-  color: white;
-  margin-top: 50px;
-  padding-right: 100px;
-  width: 300px;
+.logo-title {
   text-align: center;
+  width: 300px;
+  margin: 15px 0;
+  font-size: 25px;
 }
-/* Search Items style */
-.search-item {
+/* Navbar Style */
+.mobile-nav-bar {
+  display: none;
+}
+.mobile-menu {
+  display: none;
+}
+.nav-bar {
   display: flex;
-  margin-top: 50px;
-  margin-left: 25rem;
-  gap: 50px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(42, 39, 39);
+  height: 70px;
 }
-.nav-list {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  margin-top: 5px;
-}
-.nav-list a {
-  text-decoration: none;
-  color: white;
-}
-.search-box {
-  height: 33px;
-  outline: none;
-  padding-left: 16px;
-  background-color: lightblue;
-  border: 1px solid lightblue;
-}
-.search-icon {
-  cursor: pointer;
-  position: relative;
-  top: 5px;
-  right: 30px;
-}
-/* Lst Items style */
 .list-items {
   list-style: none;
   display: flex;
-  gap: 50px;
-  justify-content: center;
-  padding-bottom: 20px;
+}
+.list-items li {
+  z-index: 3;
+  margin-left: 25px;
 }
 .list-items a {
   text-decoration: none;
   color: white;
 }
 .nestedList {
+  padding: 0 20px 0 0;
   list-style: none;
-  position: absolute;
+  background-color: rgb(42, 39, 39);
   line-height: 2;
-  padding: 10px;
-  background-color: rgb(18, 18, 170);
-  margin-right: 5px;
-  display: none;
-}
-.list-items li:nth-child(2):hover .nestedList {
-  display: block;
-}
-.list-items li:nth-child(4):hover .nestedList {
-  display: block;
-}
-.list-items li:nth-child(5):hover .nestedList {
-  display: block;
-}
-/* Hamburger Line  Style*/
-.menu {
-  display: none;
-  cursor: pointer;
   position: absolute;
-  top: 80px;
-  right: 80px;
+  display: none;
+  margin-left: -10px;
 }
-.menu-line {
-  border-radius: 20px;
-  width: 40px;
-  height: 5px;
-  background-color: white;
-  margin-bottom: 5px;
+.list:hover .nestedList {
+  display: block;
+}
+.search-bar {
+  width: 100%;
+  margin-right: 20px;
+  height: 100%;
+  background-color: rgb(42, 39, 39);
+  color: white;
+  border: 1px solid white;
+  outline: none;
+  font-size: 20px;
+  padding: 0 20px;
+  display: none;
+  animation: searchBarShown 0.5s ease-in;
+}
+.search {
+  margin-right: 30px;
+  cursor: pointer;
+  animation: searchBarShown 0.2s ease-in;
+}
+.close {
+  display: none;
+  margin-right: 30px;
+  cursor: pointer;
+  animation: searchBarShown 0.2s ease-in;
+}
+@keyframes searchBarShown {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /* Search Book - Style */
 .container {
@@ -218,13 +211,19 @@
   gap: 80px;
   align-items: center;
 }
+.left-arr {
+  display: none;
+}
+.right-arr {
+  display: none;
+}
 .stream-para {
   margin-top: 10px;
   width: 10rem;
 }
 .stream-icons {
   display: flex;
-  gap: 50px;
+  gap: 30px;
 }
 .stream-icon {
   background-color: rgb(18, 18, 170);
@@ -307,6 +306,9 @@
   position: relative;
   top: 5px;
 }
+.txt-para {
+  display: none;
+}
 .txt-para img {
   position: relative;
   top: 5px;
@@ -343,20 +345,12 @@
   transition: all 0.3s;
   cursor: pointer;
 }
-.cardOne:hover {
-  transform: scale(1.1, 1);
-  box-shadow: 5px 10px 8px;
-}
 .cardTwo {
   width: 150px;
   height: 350px;
   background-color: white;
   transition: all 0.3s;
   cursor: pointer;
-}
-.cardTwo:hover {
-  transform: scale(1.1, 1);
-  box-shadow: 5px 10px 8px;
 }
 .cardThree {
   width: 150px;
@@ -365,20 +359,12 @@
   transition: all 0.3s;
   cursor: pointer;
 }
-.cardThree:hover {
-  transform: scale(1.1, 1);
-  box-shadow: 5px 10px 8px;
-}
 .cardFour {
   width: 150px;
   height: 350px;
   background-color: white;
   transition: all 0.3s;
   cursor: pointer;
-}
-.cardFour:hover {
-  transform: scale(1.1, 1);
-  box-shadow: 5px 10px 8px;
 }
 /* Contact Details Style */
 .footer {
@@ -390,26 +376,28 @@
 .footer-content {
   display: flex;
   justify-content: space-between;
-  margin: 0 30px;
-  padding: 40px 0;
+  padding: 20px 0;
 }
 .footer-img {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+}
+.footer-img img {
+  margin: auto;
 }
 .footer-txt {
+  text-align: center;
   width: 250px;
-  padding-top: 20px;
 }
 .contact-details {
   font-size: 23px;
 }
 .links img {
-  margin-left: 20px;
+  margin-right: 10px;
 }
 .privacy-policy {
   display: flex;
-  gap: 50px;
+  gap: 30px;
   justify-content: center;
 }
 .policy a {
@@ -421,436 +409,323 @@
   top: 8px;
 }
 /* Responsive Style */
-@media (min-width: 1300px) {
-  /*Header Navbar */
-  .search-item {
-    position: absolute;
-    right: 0;
-  }
-  .list-items {
-    justify-content: center;
-  }
-}
-@media (min-width: 1201px) and (max-width: 1295px) {
-  .search-item {
-    margin-left: 17rem;
-  }
-  .list-items {
-    margin-left: 4rem;
-  }
-}
-
-@media (min-width: 1025px) and (max-width: 1200px) {
-  /*Header Navbar */
-  .header-img {
-    display: block;
-    margin-left: 7rem;
-  }
-  .logo-img {
-    margin-left: 50px;
-  }
-  .header-title {
-    margin-top: 15px;
-    padding-bottom: 20px;
-  }
-  .search-item {
+@media (max-width: 1060px) {
+  /* Navbar Style */
+  .nav-bar {
     display: none;
   }
-  .search {
-    position: absolute;
-    right: 50px;
-    top: 9rem;
-  }
-  .search-box {
+  .mobile-nav-bar {
+    display: block;
+    background-color: rgb(42, 39, 39);
     height: 50px;
-    width: 15rem;
+    display: flex;
+    justify-content: space-between;
   }
-  .nav-list {
-    display: block;
-    font-size: 20px;
-    text-align: end;
-    margin-right: 80px;
-    margin-top: -60px;
+  .menu-item .menu {
+    margin: 15px 15px 15px 30px;
+    cursor: pointer;
+    animation: shown 0.5s ease;
   }
-  .list-items {
+  .closeMenu {
+    animation: shown 0.5s ease;
     display: none;
-    font-size: 20px;
-    text-align: end;
-    margin-top: 5px;
-    margin-right: 80px;
+    cursor: pointer;
+    margin: 15px 15px 15px 30px;
   }
-  .nav-list li {
-    display: block;
-    padding-bottom: 5px;
-  }
-  .list-items li {
-    padding-bottom: 10px;
-  }
-  .menu {
-    display: block;
-  }
-  .nestedList {
-    position: relative;
-    line-height: 1;
-    padding: 10px 0 0 0;
-  }
-  .show {
-    display: block;
-  }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  /*Header Navbar */
-  .header-img {
-    display: block;
-    margin-left: 7rem;
-  }
-  .logo-img {
-    margin-left: 50px;
-  }
-  .header-title {
-    margin-top: 15px;
-    padding-bottom: 20px;
-  }
-  .search-item {
-    display: none;
-  }
-  .search {
-    position: absolute;
-    right: 50px;
-    top: 9rem;
-  }
-  .search-box {
-    height: 50px;
-    width: 15rem;
-  }
-  .nav-list {
-    display: block;
-    position: relative;
-    font-size: 20px;
-    text-align: end;
-    margin-right: 80px;
-    margin-top: -60px;
-  }
-  .list-items {
-    display: none;
-    font-size: 20px;
-    text-align: end;
-    margin-right: 80px;
-    margin-top: 5px;
-  }
-  .nav-list li {
-    padding-bottom: 5px;
-  }
-  .list-items li {
-    padding-bottom: 10px;
-  }
-  .menu {
-    display: block;
-  }
-  .nestedList {
-    position: relative;
-    line-height: 1;
-    padding: 10px 0 0 0;
-  }
-  .show {
-    display: block;
-  }
-  /* Streaming Content Style */
-  .stream-content {
-    color: rgb(18, 18, 170);
-    background-color: lightblue;
+  .mobile-search-bar {
     width: 100%;
-    height: 230px;
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    align-items: center;
+    background-color: rgb(42, 39, 39);
+    color: white;
+    border: 1px solid white;
+    outline: none;
+    margin-right: 30px;
+    padding: 0 20px;
+    display: none;
+    animation: shown 0.7s ease;
   }
-  .stream-para {
-    margin-top: 10px;
-    width: 10rem;
+  .search-icon {
+    margin-right: 30px;
+    cursor: pointer;
   }
-  .stream-icons {
-    display: flex;
-    gap: 50px;
+  .mobile-search {
+    position: relative;
+    top: 13px;
+    animation: shown 0.5s ease;
   }
-  .stream-icon {
-    background-color: rgb(18, 18, 170);
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
+  .mobile-close {
+    display: none;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    top: 15px;
+    animation: shown 0.5s ease;
   }
-  .stream-title {
-    width: 10rem;
+  .mobile-menu {
+    display: none;
+    background-color: rgb(42, 39, 39);
+    padding: 20px 0 0 30px;
+    list-style: none;
   }
-  /* Book Collection Style */
+  .mobile-menu li {
+    animation: shown 1.5s ease-in;
+    padding-bottom: 10px;
+  }
+  .mobile-menu a {
+    color: white;
+    text-decoration: none;
+  }
+  .nestedList {
+    position: relative;
+    margin-left: 0;
+    padding-top: 10px;
+    line-height: normal;
+    transition: all 0.5s ease;
+    animation: shown 0.7s ease;
+  }
+  @keyframes shown {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+@media (max-width: 893px) {
+  .contact-details {
+    font-size: 18px;
+  }
+}
+@media (max-width: 830px) {
+  .stream-content {
+    gap: 30px;
+  }
+}
+@media (max-width: 780px) {
+  .stream-content {
+    gap: 0;
+  }
   .collection-txt {
-    gap: 350px;
+    gap: 330px;
   }
   .book-card {
-    gap: 35px;
+    gap: 30px;
   }
-  /* Contact Details Style */
+}
+@media (max-width: 750px) {
+  .stream-icons {
+    width: 300px;
+    height: 100px;
+    overflow: hidden;
+  }
+  .stream-icon {
+    transition: all 0.2s;
+  }
+  .left-arr {
+    margin-right: 15px;
+    display: block;
+    cursor: pointer;
+    visibility: hidden;
+    transition: all 0.25s;
+  }
+  .right-arr {
+    margin-left: 15px;
+    cursor: pointer;
+    display: block;
+    transition: all 0.25s;
+  }
+}
+@media (max-width: 720px) {
+  .event-title {
+    margin-right: 30rem;
+  }
+  .event-details {
+    gap: 10px;
+  }
+  .book-card {
+    gap: 20px;
+  }
+}
+@media (max-width: 701px) {
+  .event-para {
+    font-size: 13px;
+  }
+  .event-title {
+    margin-right: 24.5rem;
+  }
+  .event-img {
+    width: 350px;
+    height: 350px;
+  }
+}
+@media (max-width: 680px) {
+  .collection-txt {
+    gap: 150px;
+  }
+  .txt-para {
+    display: block;
+  }
+  .book {
+    display: grid;
+    place-items: center;
+  }
+  .book-card {
+    overflow: hidden;
+    width: 340px;
+    justify-content: normal;
+  }
+}
+@media (max-width: 621px) {
+  .card {
+    width: 500px;
+    height: 200px;
+  }
+  .search-title {
+    padding: 20px 40px 10px 20px;
+  }
+  .search-book {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  .keyword-list {
+    width: 133px;
+  }
+  .keyword img {
+    margin-left: 30px;
+  }
+  .btn {
+    width: 90px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .library-icon {
+    margin-left: 10px;
+  }
+  .footer-content {
+    padding: 35px 0;
+  }
   .footer-txt {
-    width: 200px;
     font-size: 20px;
+    width: 200px;
   }
   .contact-details {
     font-size: 15px;
   }
 }
-
-@media (min-width: 481px) and (max-width: 768px) {
-  /*Header Navbar */
-  .header-img {
-    display: block;
-  }
-  .logo-img {
-    margin-left: 50px;
-  }
-  .header-title {
-    margin-top: 12px;
-    padding-bottom: 20px;
-  }
-  .search-item {
-    display: none;
-    transition: 0.2s;
-  }
-  .search {
-    position: absolute;
-    right: 50px;
-    top: 9rem;
-  }
-  .search-box {
-    height: 50px;
-    width: 12rem;
-  }
-  .nav-list {
-    display: block;
-    font-size: 20px;
-    text-align: end;
-    margin-top: -60px;
-    margin-left: -200px;
-    padding-right: 80px;
-  }
-  .list-items {
-    display: none;
-    font-size: 20px;
-    text-align: end;
-    margin-right: 80px;
-    margin-top: 5px;
-  }
-  .nav-list li {
-    padding-bottom: 5px;
-  }
-  .list-items li {
-    padding-bottom: 10px;
-  }
-  .menu {
-    display: block;
-  }
-  .nestedList {
-    position: relative;
-    line-height: 1;
-    padding: 10px 0 0 0;
-  }
-  .show {
-    display: block;
-  }
-  /* Search Book Style*/
-  .card {
-    width: 450px;
-  }
-  .search-title {
-    padding: 30px 20px;
-  }
-  .search-book {
-    margin-left: 20px;
-  }
-  .book-name {
-    width: 180px;
-  }
-  .btn {
-    width: 80px;
-    margin-left: 10px;
-  }
-  .library-icon {
-    margin-left: 20px;
-    gap: 20px;
-  }
-  /*  Event Style*/
-  .event-title {
-    margin-right: 2rem;
-    padding-right: 14rem;
-  }
+@media (max-width: 600px) {
   .event-img {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
   }
   .event-para {
-    font-size: 10px;
+    font-size: 12px;
   }
-  /* Streaming Content Style */
+  .event-title {
+    margin-right: 21rem;
+  }
+  .event-btn {
+    margin-top: 0;
+  }
+}
+@media (max-width: 545px) {
+  .event-img {
+    width: 250px;
+  }
+  .event-title {
+    margin-right: 0;
+  }
   .stream-content {
-    color: rgb(18, 18, 170);
-    background-color: lightblue;
-    width: 100%;
-    height: 230px;
-    margin-bottom: 50px;
-    display: block;
+    position: relative;
   }
   .stream-text {
+    position: absolute;
+    top: 0;
+    margin-top: 20px;
+  }
+  .stream-title {
+    width: 20rem;
     display: grid;
     place-items: center;
-    position: relative;
-    top: 30px;
   }
   .stream-para {
+    margin-top: 0;
     width: 21rem;
-    margin-top: 5px;
+    text-align: center;
   }
   .stream-para img {
     display: none;
   }
   .stream-icons {
-    margin-top: 60px;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
+    margin-top: 50px;
   }
-  .stream-icon {
-    background-color: rgb(18, 18, 170);
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
+  .left-arr {
+    margin-top: 30px;
   }
-  .stream-title {
-    width: 15rem;
+  .right-arr {
+    margin-top: 30px;
   }
-  .stream-icon p {
-    font-size: 13px;
-    text-align: center;
-  }
-  .stream-icon:nth-child(3) p {
-    text-align: left;
-    left: 15px;
-  }
-  .stream-icon:nth-child(4) p {
-    text-align: left;
-    left: 20px;
-  }
-  /* Book Collection Style */
-  .book-collection {
-    height: 700px;
-  }
-  .collection-txt {
-    gap: 60px;
-    justify-content: center;
-    margin-left: 50px;
-  }
-  .book-card {
-    display: grid;
-    grid-template-columns: auto auto;
-  }
-  .cardOne {
-    height: 260px;
-  }
-  .cardTwo {
-    height: 260px;
-  }
-  .cardThree {
-    height: 260px;
-  }
-  .cardFour {
-    height: 260px;
-  }
-  /* Contact Details Style */
   .footer {
     height: 350px;
+  }
+  .footer-content {
+    flex-wrap: wrap;
+  }
+  .contact-details {
+    font-size: 20px;
+    margin-right: 50px;
+  }
+  .links {
+    margin-top: 20px;
+    margin-left: 50px;
+  }
+}
+@media (max-width: 520px) {
+  .card {
+    width: 400px;
+    height: 180px;
+  }
+  .keyword img {
+    margin-left: 10px;
+  }
+  .keyword-list {
+    width: 108px;
+    font-size: 15px;
+  }
+  .library-icon {
+    margin: 30px 10px;
+    gap: 0;
+    justify-content: space-between;
+  }
+  .event-img {
+    width: 220px;
+  }
+  .collection-txt {
+    padding: 50px 10px 0 10px;
+    gap: 0;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 465px) {
+  .contact-details {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 450px) {
+  .event-img {
+    width: 200px;
   }
   .footer-content {
     display: grid;
     grid-template-columns: auto auto;
   }
-  .footer-img {
-    display: block;
-  }
-  .footer-txt {
-    padding-top: 3px;
-    width: 150px;
-    font-size: 15px;
-  }
-  .contact-details {
-    font-size: 15px;
-  }
   .links {
-    margin: 20px 0 0 0;
+    margin-left: 0;
+    position: relative;
+    left: 50px;
   }
 }
-@media (min-width: 320px) and (max-width: 480px) {
-  /*Header Navbar */
-  .header-img {
-    display: block;
-  }
-  .logo-img {
-    position: relative;
-    right: 40px;
-    width: 60px;
-    height: 60px;
-    margin-left: 70px;
-  }
-  .header-title {
-    position: relative;
-    right: 40px;
-    font-size: 15px;
-    margin-top: 10px;
-    padding-left: 5px;
-    text-align: center;
-    padding-bottom: 10px;
-  }
-  .search-item {
-    display: none;
-  }
-  .search {
-    position: absolute;
-    top: 90px;
-    right: 55px;
-  }
-  .search-box {
-    width: 6rem;
-  }
-  .nav-list {
-    display: block;
-    position: absolute;
-    right: 80px;
-    text-align: end;
-    top: 130px;
-  }
-  .list-items {
-    display: none;
-    text-align: end;
-    position: relative;
-    bottom: 20px;
-    right: 80px;
-  }
-  .list-items li {
-    padding-bottom: 5px;
-  }
-  .menu {
-    display: block;
-    top: 50px;
-  }
-  .nestedList {
-    position: relative;
-    line-height: 1;
-    padding: 10px 0 0 0;
-  }
-  .show {
-    display: block;
-  }
-  /* Search Book */
+@media (max-width: 435px) {
   .card {
     width: 300px;
     height: 150px;
@@ -871,7 +746,6 @@
     width: 10px;
     height: 10px;
     position: relative;
-    bottom: 10px;
     left: 10px;
   }
   .keyword-list {
@@ -889,169 +763,55 @@
   }
   .library-icon {
     gap: 5px;
-    margin-left: 15px;
     font-size: 10px;
-    margin-top: 20px;
   }
   .library-icon img {
     width: 15px;
     height: 15px;
   }
-  /*  Event Style*/
-  .event-title {
-    margin-right: 2rem;
+  .event-para {
+    font-size: 10px;
   }
-  .event-details {
-    gap: 5px;
+  .contact-details {
+    font-size: 15px;
   }
-  .event-img {
-    width: 150px;
-    height: 200px;
+}
+@media (max-width: 405px) {
+  .contact-details {
+    font-size: 12px;
   }
+}
+@media (max-width: 400px) {
   .event-para {
     font-size: 8px;
   }
-  .event-btn {
-    width: 80px;
-    height: 30px;
-    font-size: 10px;
-    border-radius: 0%;
-    border: 1px solid lightblue;
-    outline: none;
-    background-color: lightblue;
-    cursor: pointer;
-    margin-top: 5px;
+  .event-img {
+    width: 180px;
+    height: 180px;
   }
-  /* Streaming Content Style */
-  .stream-content {
-    color: rgb(18, 18, 170);
-    background-color: lightblue;
-    width: 100%;
-    height: 350px;
-    margin-bottom: 50px;
-    display: block;
-    overflow: hidden;
+  .left-arr {
+    margin-right: 0;
   }
-  .stream-text {
-    display: grid;
-    place-items: center;
-    position: relative;
-    top: 30px;
+  .right-arr {
+    margin-left: 0;
   }
-  .stream-title {
-    width: 15rem;
-  }
-  .stream-para {
-    position: relative;
-    left: 10px;
-    font-size: 15px;
-    width: 21rem;
-    margin-top: 5px;
-  }
-  .stream-para img {
-    display: none;
-  }
-  .stream-icons {
-    margin-top: 60px;
-    display: grid;
-    gap: 30px;
-    grid-template-columns: auto auto auto;
-    place-items: center;
-  }
-  .stream-icon {
-    background-color: rgb(18, 18, 170);
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-  }
-  .stream-icon p {
-    font-size: 13px;
-    text-align: center;
-  }
-
-  .stream-icon:nth-child(3) p {
-    text-align: left;
-    left: 15px;
-  }
-  .stream-icon:nth-child(4) p {
-    text-align: left;
-    left: 20px;
-  }
-  /* Book Collection Style */
-  .book-collection {
-    height: 700px;
-    overflow: hidden;
-  }
-  .collection-txt {
-    gap: 60px;
-    font-size: 10px;
-  }
+}
+@media (max-width: 370px) {
   .txt-title {
-    position: relative;
-    top: 12px;
+    top: 8px;
+    font-size: 13px;
   }
-  .book-card {
-    display: grid;
-    gap: 50px;
-    grid-template-columns: auto auto;
-  }
-  .book-card img {
-    width: 120px;
-    height: 120px;
-  }
-  .book-card p {
-    font-size: 10px;
-  }
-  .cardOne {
-    width: 120px;
-    height: 260px;
-  }
-  .cardTwo {
-    width: 120px;
-    height: 260px;
-  }
-  .cardThree {
-    width: 120px;
-    height: 260px;
-  }
-  .cardFour {
-    width: 120px;
-    height: 260px;
-  }
-
-  /* Contact Details Style */
-  .footer {
-    height: 350px;
-  }
-  .footer-content {
-    margin-left: 10px;
-    display: grid;
-    grid-template-columns: auto auto;
-  }
-  .footer-img {
-    display: block;
+  .txt-para {
+    font-size: 13px;
   }
   .footer-img img {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
   }
   .footer-txt {
-    padding-top: 3px;
-    width: 100px;
-    font-size: 13px;
+    font-size: 18px;
   }
   .contact-details {
-    font-size: 13px;
-    position: relative;
-    right: 130px;
-    width: 150px;
-  }
-  .links {
-    width: 250px;
-    margin: 20px 0 0 0;
-  }
-  .privacy-policy {
-    justify-content: center;
-    gap: 5px;
+    font-size: 10px;
   }
 }
