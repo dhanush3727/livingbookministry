@@ -588,6 +588,7 @@
     margin-left: 20px;
   }
   .library-icon {
+    gap: 20px;
     font-size: 12px;
   }
   .keyword-list {
