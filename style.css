@@ -587,6 +587,9 @@
     margin-top: 10px;
     margin-left: 20px;
   }
+  .library-icon {
+    font-size: 12px;
+  }
   .keyword-list {
     width: 133px;
   }
