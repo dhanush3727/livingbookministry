@@ -160,9 +160,9 @@
   margin-left: 20px;
 }
 .library-icon {
-  margin-left: 45px;
+  padding: 0 45px;
   display: flex;
-  margin-top: 40px;
+  justify-content: space-between;
 }
 .library-icon a {
   text-decoration: none;
@@ -598,7 +598,6 @@
     margin-right: 10px;
   }
   .library-icon {
-    font-size: 12px;
     margin-left: 10px;
   }
   .footer-content {
@@ -695,7 +694,8 @@
     font-size: 15px;
   }
   .library-icon {
-    margin: 30px 10px;
+    font-size: 12px;
+    padding: 0 25px;
   }
   .event-img {
     width: 220px;
@@ -763,6 +763,7 @@
     margin-left: 5px;
   }
   .library-icon {
+    padding: 0 15px;
     font-size: 10px;
   }
   .library-icon img {
