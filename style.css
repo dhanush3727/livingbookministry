@@ -162,7 +162,6 @@
 .library-icon {
   margin-left: 45px;
   display: flex;
-  gap: 50px;
   margin-top: 40px;
 }
 .library-icon a {
@@ -587,10 +586,6 @@
     margin-top: 10px;
     margin-left: 20px;
   }
-  .library-icon {
-    gap: 20px;
-    font-size: 12px;
-  }
   .keyword-list {
     width: 133px;
   }
@@ -701,8 +696,6 @@
   }
   .library-icon {
     margin: 30px 10px;
-    gap: 0;
-    justify-content: space-between;
   }
   .event-img {
     width: 220px;
@@ -770,7 +763,6 @@
     margin-left: 5px;
   }
   .library-icon {
-    gap: 5px;
     font-size: 10px;
   }
   .library-icon img {
